@@ -89,7 +89,7 @@ export default function Home() {
             <Image src='/circle.png' height={50} width={50} alt='avatar' className='absolute -top-10 -left-10' />
             <Image src='/comp.png' height={50} width={50} alt='avatar' className='absolute -bottom-10 -right-20' />
           </div>
-          <p className='font-bold text-2xl'>Hello, I'm Jatinder Singh</p>
+          <p className='font-bold text-2xl'>{`Hello, I'm Jatinder Singh`}</p>
           <p className='w-[80%] text-center leading-8'> A passionate and versatile Full Stack Developer with expertise in a variety of technologies. With a keen focus on user-centric design and seamless functionality, I create digital experiences that leave a lasting impression.</p>
           <Link href='#Project' className='block bg-[#6C5DE5] text-[16px] text-white px-10 py-3 rounded'>My Projects</Link>
         </div>
@@ -98,8 +98,8 @@ export default function Home() {
         <h1 className='text-center text-3xl font-bold'>Projects</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
           {projects.map((data, index) => {
-            return <div className="max-w-sm rounded overflow-hidden shadow-lg">
-              <div className='relative w-full min-h-[200px]' key={index}>
+            return <div className="max-w-sm rounded overflow-hidden shadow-lg" key={index}>
+              <div className='relative w-full min-h-[200px]'>
                 <Image layout='fill' className="aspect-video" src={data.imageSrc} alt={data.title} />
               </div>
               <div className="px-6 py-4">
